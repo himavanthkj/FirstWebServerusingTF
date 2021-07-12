@@ -122,7 +122,7 @@ resource "aws_eip" "EIP" {
 # 9. Create Ubuntu server and install/enable apache2 
 
 resource "aws_instance" "web-server-instance" {
-    ami = "ami-0c1a7f89451184c8b"
+    ami = "ami-09e67e426f25ce0d7"
     instance_type = "t2.micro"
     availability_zone = "us-east-1a"
     key_name = "main_key"
