@@ -42,7 +42,7 @@ resource "aws_route_table" "rt" {
 resource "aws_subnet" "my_subnet" {
   vpc_id     = aws_vpc.prod_vpc.id
   cidr_block = "10.0.1.0/24"
-  availability_zone = "us-east-1"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "Main"
@@ -124,7 +124,7 @@ resource "aws_eip" "EIP" {
 resource "aws_instance" "web-server-instance" {
     ami = "ami-0c1a7f89451184c8b"
     instance_type = "t2.micro"
-    availability_zone = "us-east-1"
+    availability_zone = "us-east-1a"
     key_name = "main_key"
 
     network_interface {
