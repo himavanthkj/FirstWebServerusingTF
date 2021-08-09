@@ -7,7 +7,7 @@ pipeline {
         stage('Run Terraform') {
             steps {
                 sh 'terraform init'
-                sh 'terraform ${tfcommsnf} ${autoApprove}'
+                sh 'terraform ${tfcommand} ${autoApprove}'
             }
         }
     }
